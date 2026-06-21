@@ -8,9 +8,10 @@ services:
           memory: 512M
     healthcheck:
       test: ["CMD", "curl", "-I", "http://config-server:8888"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 120s
     ports:
      - 8888:8888
 
